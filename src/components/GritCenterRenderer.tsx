@@ -1,6 +1,7 @@
 import { Col, Row } from "antd";
 import React, { useState } from "react";
 import AceEditor from "react-ace";
+import gritExample from "../assets/grit-exam-example.png";
 
 // Import a theme and mode for Ace Editor
 import "ace-builds/src-noconflict/mode-json";
@@ -159,12 +160,10 @@ const JsonToHtml: React.FC = () => {
 
   return (
     <div>
-      <span>
-        Hướng dẫn: Vào trang GritCenter, phần đề thi, bấm F12, chọn tab Network
-        Bấm vào đề thi muốn xem, nếu có quyền làm bài thi, xem request có đường
-        dẫn /590 hoặc số theo id của bài thi (ở trên Console) Copy value ở
-        response paste vào đây để render ra bài thi
-      </span>
+      <a href={gritExample} className="my-4" target="_blank">
+        Xem hướng dẫn
+      </a>
+
       <Row gutter={16} style={{ height: "100vh" }}>
         <Col span={12} style={{ height: "100%" }}>
           <AceEditor
