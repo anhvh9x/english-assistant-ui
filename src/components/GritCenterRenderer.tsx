@@ -158,33 +158,41 @@ const JsonToHtml: React.FC = () => {
   };
 
   return (
-    <Row gutter={16} style={{ height: "100vh" }}>
-      <Col span={12} style={{ height: "100%" }}>
-        <AceEditor
-          mode="json"
-          theme="github"
-          onChange={handleJsonChange}
-          value={jsonInput}
-          name="jsonEditor"
-          editorProps={{ $blockScrolling: true }}
-          width="100%"
-          height="100%"
-        />
-      </Col>
-      <Col
-        span={12}
-        style={{
-          height: "100%",
-          overflowY: "scroll",
-          backgroundColor: "#f5f5f5",
-        }}
-      >
-        <div
-          dangerouslySetInnerHTML={{ __html: htmlOutput }}
-          style={{ padding: "16px" }}
-        />
-      </Col>
-    </Row>
+    <div>
+      <span>
+        Hướng dẫn: Vào trang GritCenter, phần đề thi, bấm F12, chọn tab Network
+        Bấm vào đề thi muốn xem, nếu có quyền làm bài thi, xem request có đường
+        dẫn /590 hoặc số theo id của bài thi (ở trên Console) Copy value ở
+        response paste vào đây để render ra bài thi
+      </span>
+      <Row gutter={16} style={{ height: "100vh" }}>
+        <Col span={12} style={{ height: "100%" }}>
+          <AceEditor
+            mode="json"
+            theme="github"
+            onChange={handleJsonChange}
+            value={jsonInput}
+            name="jsonEditor"
+            editorProps={{ $blockScrolling: true }}
+            width="100%"
+            height="100%"
+          />
+        </Col>
+        <Col
+          span={12}
+          style={{
+            height: "100%",
+            overflowY: "scroll",
+            backgroundColor: "#f5f5f5",
+          }}
+        >
+          <div
+            dangerouslySetInnerHTML={{ __html: htmlOutput }}
+            style={{ padding: "16px" }}
+          />
+        </Col>
+      </Row>
+    </div>
   );
 };
 
