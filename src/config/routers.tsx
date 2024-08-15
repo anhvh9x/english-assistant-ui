@@ -6,9 +6,11 @@ import { RouteObject } from "react-router-dom";
 const Home = lazy(() => import("../pages/Home"));
 const GritCenter = lazy(() => import("../pages/GritCenter"));
 
+const BASE_PATH = "/english-assistant-ui";
+
 export const ROUTE_PATHS = {
   HOME: "/",
-  GRIT_CENTER: "/grit-center",
+  GRIT_CENTER: `${BASE_PATH}/grit-center`,
 };
 
 export const routes: RouteObject[] = [
