@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://github.com/anhvh9x/english-assistant-ui",
+  "homepage": "https://anhvh9x.github.io/english-assistant-ui",
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",
