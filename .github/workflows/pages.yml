@@ -37,10 +37,13 @@ jobs:
           node-version: "20"
 
       - name: Install dependencies
-        run: yarn install
+        run: |
+          yarn install
 
       - name: Build the project
-        run: yarn build --base=/english-assistant-ui
+        run: |
+          yarn build --base=/english-assistant-ui
+          cp dist/index.html dist/404.html
 
       - name: Upload site artifact
         uses: actions/upload-pages-artifact@v3
