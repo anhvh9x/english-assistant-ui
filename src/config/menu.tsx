@@ -10,4 +10,8 @@ export const menuItems = [
     label: "GritCenter",
     key: ROUTE_PATHS.GRIT_CENTER,
   },
+  {
+    label: "K12 English",
+    key: ROUTE_PATHS.ENGLISH,
+  },
 ];
